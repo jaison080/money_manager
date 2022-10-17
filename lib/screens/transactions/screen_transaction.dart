@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_manager/screens/transactions/widgets/transaction_tile.dart';
 
 class ScreenTransaction extends StatelessWidget {
   const ScreenTransaction({Key? key}) : super(key: key);
@@ -8,17 +9,10 @@ class ScreenTransaction extends StatelessWidget {
     return ListView.separated(
         padding: EdgeInsets.all(10),
         itemBuilder: (ctx, index) {
-          return const Card(
-            elevation: 0,
-            child: ListTile(
-              leading: CircleAvatar(
-                radius: 50,
-                child: Text('12\nDec', textAlign: TextAlign.center),
-              ),
-              title: Text('Rs.100000'),
-              subtitle: Text('Travel'),
-            ),
-          );
+          return const TransactionTile(
+                  transactionDate:"12 \nDec" ,
+                  transactionTitle: "Rs.1000",
+                  transactionSubtitle: "Travel",);
         },
         separatorBuilder: (ctx, index) {
           return const SizedBox(
@@ -28,3 +22,5 @@ class ScreenTransaction extends StatelessWidget {
         itemCount: 10);
   }
 }
+
+

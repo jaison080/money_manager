@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:money_manager/models/category/category_model.dart';
 import 'package:money_manager/screens/home/screen_home.dart';
@@ -23,8 +24,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Money Manager',
+        
         theme: ThemeData(
+          fontFamily: GoogleFonts.poppins().fontFamily,
           // This is the theme of your application.
           //
           // Try running your application with "flutter run". You'll see the
@@ -35,6 +38,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           primarySwatch: Colors.purple,
+
         ),
         home: const ScreenHome());
   }
