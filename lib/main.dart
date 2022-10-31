@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Money Manager',
+        title: 'Moneteary Manager',
         
         theme: ThemeData(
           fontFamily: GoogleFonts.poppins().fontFamily,
